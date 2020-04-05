@@ -1,0 +1,77 @@
+.hover-card {
+    &__container {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        column-gap: 50px;
+        margin-bottom: 50px;
+    }
+
+
+    &__card {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        transition: transform .5s ease;
+        min-width: 300px;
+
+        &:hover {
+            transform: translateY(8%);
+        }
+
+        &:hover .hover-card__infos {
+            transform: translateY(0);
+            box-shadow: 3px -3px 5px rgba(12, 12, 12, 0.2);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        z-index: 5;
+        box-shadow: 3px -3px 5px rgba(12, 12, 12, 0.2);
+    }
+
+    &__infos {
+        display: block;
+        width: 100%;
+        text-align: center;
+        z-index: 4;
+        transform: translateY(100%);
+        transition: all .3s ease;
+        background: rgb(251, 248, 248);
+        box-shadow: none;
+        padding: 10px 20px;
+
+        h2 {
+            font-family: 'Rokkitt', sans-serif;
+            font-size: 2.5rem;
+            line-height: 2rem;
+        }
+
+        p {
+            font-family: sans-serif;
+            line-height: 2rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .hover-card {
+        &__card {
+            transform: translateY(8%);
+            margin-bottom: 50px;
+        }
+
+        &__infos {
+            transform: translateY(0);
+            box-shadow: 3px -3px 5px rgba(12, 12, 12, 0.2);
+        }
+    }
+}

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>
+            Differents styles de cartes
+        </title>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#card1">carte instagram</a></li>
+                <li><a href="#card2">carte hover</a></li>
+                <li><a href="#card3">carte asymétrique</a></li>
+                <li><a href="#card4">carte grille</a></li>
+                <li><a href="#card5">carte cartoon</a></li>
+            </ul>
+        </nav>
+        <section class="instagram-card" id="card1">
+            <div class="instagram-card__container">
+                <div class="instagram-card__card card1">
+                    <img src="./img/image.jpg" alt="" class="instagram-card__img">
+                    <div class="instagram-card__text">
+                        <div>
+                            <i class='lni lni-heart'></i> 30k
+                            <i class="lni lni-popup"></i> 200
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-card__card card2">
+                    <img src="./img/image.jpg" alt="" class="instagram-card__img">
+                    <div class="instagram-card__text">
+                        <div>
+                            <i class='lni lni-heart'></i> 30k
+                            <i class="lni lni-popup"></i> 200
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-card__card card3">
+                    <img src="./img/image.jpg" alt="" class="instagram-card__img">
+                    <div class="instagram-card__text">
+                        <div>
+                            <i class='lni lni-heart'></i> 30k
+                            <i class="lni lni-popup"></i> 200
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+                <h1>Code SCSS carte Instagram</h1>
+.instagram-card {
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__card {
+        position: relative;
+        min-width: 300px;
+        width: 30%;
+        height: 400px;
+        box-shadow: 10px 10px 6px -6px rgba(0, 0, 0, 0.3);
+        z-index: 0;
+        margin-bottom: 50px;
+    }
+
+    &__card:hover {
+        .instagram-card__text {
+            opacity: 1;
+        }
+        .instagram-card__img {
+            filter: grayscale(20%) contrast(50%);
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        transition: filter .4s ease;
+    }
+    &__text {
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity .2s ease;
+            div {
+                color: rgb(255, 255, 255);
+                font-size: 1.5rem;
+                font-weight: bolder;
+            }
+        }
+}
+            </pre>
+        </section>
+
+        <section class="hover-card" id="card2">
+            <div class="hover-card__container">
+                <div class="hover-card__card">
+                    <img src="https://images.unsplash.com/photo-1528502499757-107ea9369104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        alt="Poêlée de crevette" class="hover-card__img">
+                    <div class="hover-card__infos">
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Un peu d'infos en +
+                        </p>
+                    </div>
+                </div>
+                <div class="hover-card__card">
+                    <img src="https://images.unsplash.com/photo-1528502499757-107ea9369104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        alt="Poêlée de crevette" class="hover-card__img">
+                    <div class="hover-card__infos">
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Un peu d'infos en +
+                        </p>
+                    </div>
+                </div>
+                <div class="hover-card__card">
+                    <img src="https://images.unsplash.com/photo-1528502499757-107ea9369104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        alt="Poêlée de crevette" class="hover-card__img">
+                    <div class="hover-card__infos">
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Un peu d'infos en +
+                        </p>
+                    </div>
+                </div>
+                <div class="hover-card__card">
+                    <img src="https://images.unsplash.com/photo-1528502499757-107ea9369104?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                        alt="Poêlée de crevette" class="hover-card__img">
+                    <div class="hover-card__infos">
+                        <h2>Lorem Ipsum</h2>
+                        <p>
+                            Un peu d'infos en +
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <pre>
+                <h1>Code SCSS carte effet hover</h1>
+.hover-card {
+    &__container {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        column-gap: 50px;
+    }
+
+
+    &__card {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        transition: transform .5s ease;
+        min-width: 300px;
+
+        &:hover {
+            transform: translateY(8%);
+        }
+
+        &:hover .hover-card__infos {
+            transform: translateY(0);
+            box-shadow: 3px -3px 5px rgba(12, 12, 12, 0.2);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        z-index: 5;
+        box-shadow: 3px -3px 5px rgba(12, 12, 12, 0.2);
+    }
+
+    &__infos {
+        display: block;
+        width: 100%;
+        text-align: center;
+        z-index: 4;
+        transform: translateY(100%);
+        transition: all .3s ease;
+        background: rgb(251, 248, 248);
+        box-shadow: none;
+        padding: 10px 20px;
+
+        h2 {
+            font-family: 'Rokkitt', sans-serif;
+            font-size: 2.5rem;
+            line-height: 2rem;
+        }
+
+        p {
+            font-family: sans-serif;
+            line-height: 2rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .hover-card {
+        &__card {
+            transform: translateY(8%);
+            margin-bottom: 50px;
+        }
+
+        &__infos {
+            transform: translateY(0);
+            box-shadow: 3px -3px 5px rgba(12, 12, 12, 0.2);
+        }
+    }
+}
+            </pre>
+        </section>
+
+        <section class="modern-card" id="card3">
+            <div class="modern-card__container">
+                <div class="modern-card__card">
+                    <div class="modern-card__img">
+                        <img src="https://images.unsplash.com/photo-1577132124566-c58a2f545670?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=701&q=80"
+                            alt="">
+                    </div>
+                    <div class="modern-card__contentBox">
+                        <div class="modern-card__content">
+                            <h2>Responsive Card</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dignissimos magni
+                                suscipit
+                                dolorem eum nulla tempora minima sint laboriosam id!</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card__card">
+                    <div class="modern-card__img">
+                        <img src="https://images.unsplash.com/photo-1574874920378-7c8112ba41fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                            alt="">
+                    </div>
+                    <div class="modern-card__contentBox">
+                        <div class="modern-card__content">
+                            <h2>Responsive Card</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dignissimos magni
+                                suscipit
+                                dolorem eum nulla tempora minima sint laboriosam id!</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modern-card__card">
+                    <div class="modern-card__img">
+                        <img src="https://images.unsplash.com/photo-1567102095092-fa07e38f66b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                            alt="">
+                    </div>
+                    <div class="modern-card__contentBox">
+                        <div class="modern-card__content">
+                            <h2>Responsive Card</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dignissimos magni
+                                suscipit
+                                dolorem eum nulla tempora minima sint laboriosam id!</p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+                <h1>Code SCSS carte moderne asymétrique</h1>
+.modern-card {
+    &__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 100px 0;
+    }
+
+    &__img {
+        position: relative;
+        width: 320px;
+        height: 400px;
+        left: 25px;
+        z-index: 1;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-5%);
+            width: 100%;
+            height: 110%;
+            object-fit: cover;
+        }
+    }
+
+    &__contentBox {
+        width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: #000;
+        padding: 40px 10%;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .modern-card {
+        &__img {
+            width: 100%;
+            height: 250px;
+            left: 0;
+        }
+
+        &__card {
+            margin: 20px;
+            flex-direction: column;
+            max-width: 350px;
+        }
+
+        &__contentBox {
+            width: 100%;
+            height: auto;
+            right: 0;
+            padding: 30px;
+            text-align: center;
+        }
+    }
+}
+            </pre>
+        </section>
+
+        <section class="grid-card" id="card4">
+            <div class="grid-card__container">
+                <div class="grid-card__card">
+                    <div class="grid-card__img">
+                        <img src="https://images.unsplash.com/photo-1565396319243-49b1f67c82a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+                            alt="">
+                    </div>
+                    <div class="grid-card__contentCard">
+                        <div>
+                            <h2>Some Food !</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, culpa dolorum laboriosam
+                                quod
+                                pariatur iste eligendi tempora vel totam? Id assumenda placeat nobis distinctio quae
+                                soluta
+                                rem accusantium ab qui.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-card__card">
+                    <div class="grid-card__img">
+                        <img src="https://images.unsplash.com/photo-1565396319243-49b1f67c82a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+                            alt="">
+                    </div>
+                    <div class="grid-card__contentCard">
+                        <div>
+                            <h2>Some Food !</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, culpa dolorum laboriosam
+                                quod
+                                pariatur iste eligendi tempora vel totam? Id assumenda placeat nobis distinctio quae
+                                soluta
+                                rem accusantium ab qui.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-card__card">
+                    <div class="grid-card__img">
+                        <img src="https://images.unsplash.com/photo-1565396319243-49b1f67c82a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+                            alt="">
+                    </div>
+                    <div class="grid-card__contentCard">
+                        <div>
+                            <h2>Some Food !</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, culpa dolorum laboriosam
+                                quod
+                                pariatur iste eligendi tempora vel totam? Id assumenda placeat nobis distinctio quae
+                                soluta
+                                rem accusantium ab qui.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-card__card">
+                    <div class="grid-card__img">
+                        <img src="https://images.unsplash.com/photo-1565396319243-49b1f67c82a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+                            alt="">
+                    </div>
+                    <div class="grid-card__contentCard">
+                        <div>
+                            <h2>Some Food !</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, culpa dolorum laboriosam
+                                quod
+                                pariatur iste eligendi tempora vel totam? Id assumenda placeat nobis distinctio quae
+                                soluta
+                                rem accusantium ab qui.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <pre>
+                <h1>Code SCSS carte grille</h1>
+.grid-card {
+    &__container {
+        width: 90%;
+        max-width: 1300px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 25%);
+        margin: 40px auto;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        &:nth-of-type(even) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background: #000;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__contentCard {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .grid-card {
+        &__container {
+            grid-template-columns: repeat(auto-fit, 100%);
+            margin: 50px;
+        }
+
+        &__card {
+            flex-direction: row;
+            margin: 10px 0;
+
+            &:nth-of-type(even) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        &__contentCard,
+        &__img {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-card {
+        &__container {
+            margin: 30px;
+        }
+
+        &__card,
+        &__card:nth-of-type(even) {
+            flex-direction: column;
+        }
+
+        &__contentCard,
+        &__img {
+            width: 100%;
+        }
+
+    }
+}
+            </pre>
+        </section>
+
+        <section class="cartoon-card" id="card5">
+            <div class="cartoon-card__container">
+                <div class="cartoon-card__card">
+                    <input type="checkbox" name="">
+                    <div class="cartoon-card__toggle">+</div>
+                    <div class="cartoon-card__img">
+                        <img
+                            src="https://images.unsplash.com/photo-1577200765113-54f2f33b19f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                    </div>
+                    <div class="cartoon-card__details">
+                        <h2>Some Details</h2>
+                        <p>On this beautiful city, in a foreign country across the world !
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum et provident
+                            veniam
+                            quisquam
+                            consequuntur nostrum sunt officiis dolorum cumque.
+                        </p>
+                    </div>
+                </div>
+                <div class="cartoon-card__card">
+                    <input type="checkbox" name="">
+                    <div class="cartoon-card__toggle">+</div>
+                    <div class="cartoon-card__img">
+                        <img
+                            src="https://images.unsplash.com/photo-1577200765113-54f2f33b19f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                    </div>
+                    <div class="cartoon-card__details">
+                        <h2>Some Details</h2>
+                        <p>On this beautiful city, in a foreign country across the world !
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum et provident
+                            veniam
+                            quisquam
+                            consequuntur nostrum sunt officiis dolorum cumque.
+                        </p>
+                    </div>
+                </div>
+                <div class="cartoon-card__card">
+                    <input type="checkbox" name="">
+                    <div class="cartoon-card__toggle">+</div>
+                    <div class="cartoon-card__img">
+                        <img
+                            src="https://images.unsplash.com/photo-1577200765113-54f2f33b19f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                    </div>
+                    <div class="cartoon-card__details">
+                        <h2>Some Details</h2>
+                        <p>On this beautiful city, in a foreign country across the world !
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum et provident
+                            veniam
+                            quisquam
+                            consequuntur nostrum sunt officiis dolorum cumque.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <pre>
+                <h1>Code SCSS carte cartoon</h1>
+.cartoon-card {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        margin: 30px;
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: #262626;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 3px 3px 3px rgba(125, 125, 125, 0.15);
+    }
+
+    &__toggle,
+    input {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        outline: none;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    input {
+        opacity: 0;
+    }
+
+    input:checked~&__toggle {
+        box-shadow: 0 0 0 500px #dbae7c;
+        transform: rotate(225deg);
+    }
+
+    &__toggle {
+        pointer-events: none;
+        border-radius: 50%;
+        background: #fff;
+        transition: 0.5s;
+        text-align: center;
+        line-height: 50px;
+        font-size: 2.4rem;
+        box-shadow: 0 0 0 0 #dbae7c;
+    }
+
+    &__img,
+    &__details {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+    &__details {
+        padding: 25px;
+        z-index: 3;
+        pointer-events: none;
+        transition: 0.5s;
+        opacity: 0;
+        color: #0d4a4b;
+
+        h2 {
+            margin-bottom: 5px;
+        }
+    }
+
+    input:checked~&__details {
+        opacity: 1;
+        transition-delay: 0.5s;
+    }
+}
+            </pre>
+        </section>
+    </body>
+
+</html>
